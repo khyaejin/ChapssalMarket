@@ -32,11 +32,11 @@
        		<div class="h-100 p-2">	
        			<img src="./resources/images/<%=product.getFilename()%>" style="width: 250px; height:350px" />		
 				<h5><b><%=product.getName()%></b></h5>
-				<p><%=product.getAuthor()%>
-				<br> <%=product.getPublisher()%> | <%=product.getUnitPrice()%>원
-				<p> <%=product.getDescription().substring(0,60)%>...
-				<p><%=product.getUnitPrice()%>원
-				<p><a href="./product.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상세 정보 &raquo;</a>
+				<p>등록자: <%=product.getRegistrant()%></p>
+				<p>가격: <%=product.getUnitPrice()%>원</p>
+				<p>상태: <%=product.getCondition()%></p>
+				<p><%=product.getDescription().substring(0, 60)%>...</p>
+				<p><a href="./product.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상세 정보 &raquo;</a></p>
 			</div>	
 		</div>			
 		<%
