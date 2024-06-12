@@ -1,4 +1,5 @@
-# ChapssalMarket
+<h1 align="center">🌾 ChapssalMarket🌾 </h1>
+<br><br>
 
 ## 📝 프로젝트 개요
 
@@ -21,7 +22,7 @@
 
 ## 🎥 시현 영상
 
-_시현 영상을 여기에 추가하세요._
+[![시현 영상](https://img.youtube.com/vi/q1uQARVKBVo/0.jpg)](https://youtu.be/q1uQARVKBVo)
 
 ## 🗃 DB (MySQL 사용)
 
