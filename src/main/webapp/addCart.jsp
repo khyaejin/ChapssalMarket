@@ -25,45 +25,31 @@
         return;
     }
 
-    // 전체 상품 목록 가져오기
-    ArrayList<Product> goodsList = dao.getAllProducts();
+    // 세션에서 장바구니 목록 가져오기
+    ArrayList<Product> cartList = (ArrayList<Product>) session.getAttribute("cartlist");
     
-    // 장바구니에 추가할 상품
-    Product goods = new Product();
-    
-    // 해당 ID와 일치하는 상품 찾기
-    for (int i = 0; i < goodsList.size(); i++) {
-        goods = goodsList.get(i);
-        if (goods.getProductId().equals(id)) { 			
+    // 장바구니가 비어있으면 새로운 ArrayList 생성
+    if (cartList == null) { 
+        cartList = new ArrayList<Product>();
+        session.setAttribute("cartlist", cartList);
+    }
+
+    // 장바구니에 추가할 상품이 이미 있는지 확인
+    boolean alreadyInCart = false;
+    for (Product cartProduct : cartList) {
+        if (cartProduct.getProductId().equals(id)) {
+            // 이미 장바구니에 있는 경우 수량 증가
+            cartProduct.setQuantity(cartProduct.getQuantity() + 1);
+            alreadyInCart = true;
             break;
         }
     }
-    
-    // 세션에서 장바구니 목록 가져오기
-    ArrayList<Product> list = (ArrayList<Product>) session.getAttribute("cartlist");
-    
-    // 장바구니가 비어있으면 새로운 ArrayList 생성
-    if (list == null) { 
-        list = new ArrayList<Product>();
-        session.setAttribute("cartlist", list);
-    }
 
-    int cnt = 0;
-    Product goodsQnt = new Product();
-    // 이미 장바구니에 해당 상품이 있는지 확인하고 수량 증가
-    for (int i = 0; i < list.size(); i++) {
-        goodsQnt = list.get(i);
-        if (goodsQnt.getProductId().equals(id)) {
-            cnt++;
-            int orderQuantity = goodsQnt.getQuantity() + 1;
-            goodsQnt.setQuantity(orderQuantity);
-        }
-    }
-
-    // 장바구니에 해당 상품이 없으면 새로 추가
-    if (cnt == 0) { 
-        goods.setQuantity(1);
-        list.add(goods);
+    // 장바구니에 추가할 상품이 없는 경우 새로 추가
+    if (!alreadyInCart) { 
+        Product newProduct = new Product(product.getProductId(), product.getName(), product.getUnitPrice());
+        newProduct.setQuantity(1);
+        cartList.add(newProduct);
     }
 
     // 장바구니에 상품 추가 후 상품 정보 페이지로 리다이렉트
