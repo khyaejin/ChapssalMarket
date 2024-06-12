@@ -36,7 +36,7 @@
 				<br> <%=product.getPublisher()%> | <%=product.getUnitPrice()%>원
 				<p> <%=product.getDescription().substring(0,60)%>...
 				<p><%=product.getUnitPrice()%>원
-				<p><a href="./Product.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상세 정보 &raquo;</a>
+				<p><a href="./product.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상세 정보 &raquo;</a>
 			</div>	
 		</div>			
 		<%

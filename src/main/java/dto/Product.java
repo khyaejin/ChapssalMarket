@@ -6,34 +6,34 @@ public class Product implements Serializable {
 
 	private static final long serialVersionUID = -4274700572038677000L;
 
-	private String productId; 		    //책 ID
-	private String name;			//책이름
-	private int  unitPrice; 	    //가격
-	private String author;			//저자
-	private String description; 	//설명
-	private String publisher;	    //출판사
-	private String category; 		//분류
-	private long   unitsInStock; 	//재고개수
-	private String releaseDate;   //출판일(월/년)
-	private String condition; 		//신제품 or 구제품 or 리퍼브제품
-	private String filename;        //이미지
-	
+	private String productId; 		    // 제품 ID
+	private String name;			    // 제품 이름
+	private int unitPrice; 	            // 가격
+	private String registrant;		    // 등록자
+	private String description; 	    // 설명
+	private String category; 		    // 분류
+	private String releaseDate;         // 구매일 (월/년)
+	private String condition; 		    // 신상품 or 중고상품
+	private String filename;            // 이미지 파일 이름
 
+	// 기본 생성자
 	public Product() {
 		super();
-}
+	}
 
-	public Product(String productId, String name, Integer unitPrice) {
+	// 필드 초기화 생성자
+	public Product(String productId, String name, int unitPrice) {
 		this.productId = productId;
 		this.name = name;
 		this.unitPrice = unitPrice;
 	}
 
+	// Getter 및 Setter 메서드
 	public String getProductId() {
 		return productId;
 	}
 
-	public void setProduct(String productId) {
+	public void setProductId(String productId) {
 		this.productId = productId;
 	}
 
@@ -53,12 +53,12 @@ public class Product implements Serializable {
 		this.unitPrice = unitPrice;
 	}
 
-	public String getAuthor() {
-		return author;
+	public String getRegistrant() {
+		return registrant;
 	}
 
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setRegistrant(String registrant) {
+		this.registrant = registrant;
 	}
 
 	public String getDescription() {
@@ -69,28 +69,12 @@ public class Product implements Serializable {
 		this.description = description;
 	}
 
-	public String getPublisher() {
-		return publisher;
-	}
-
-	public void setPublisher(String publisher) {
-		this.publisher = publisher;
-	}
-
 	public String getCategory() {
 		return category;
 	}
 
 	public void setCategory(String category) {
 		this.category = category;
-	}
-
-	public long getUnitsInStock() {
-		return unitsInStock;
-	}
-
-	public void setUnitsInStock(long unitsInStock) {
-		this.unitsInStock = unitsInStock;
 	}
 
 	public String getReleaseDate() {
@@ -116,6 +100,4 @@ public class Product implements Serializable {
 	public void setFilename(String filename) {
 		this.filename = filename;
 	}
-
-
 }

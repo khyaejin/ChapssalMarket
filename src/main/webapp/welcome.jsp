@@ -9,7 +9,7 @@
 <div class="container py-4">
     <%@ include file="menu.jsp"%>    
     <%!String greeting = "찹쌀마켓에 오신 것을 환영합니다";
-    String tagline = "Welcome to Web Market!";%>    
+    String tagline = "Welcome to Chapssal Market!";%>    
     <div class="p-5 mb-4 bg-body-tertiary rounded-3">
         <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold"><%=greeting%></h1>
@@ -37,7 +37,7 @@
                     String CT = hour + ":" + minute + ":" + second + " " + am_pm;
                     out.println("현재 접속 시각: " + CT + "\n");
                 %>  			
-                <p><a href="Products.jsp" class="btn btn-info">상품 목록 보기 &raquo;</a></p>
+                <p><a href="products.jsp" class="btn btn-info">상품 목록 보기 &raquo;</a></p>
             </div>
         </div>   
     </div> 	
