@@ -30,16 +30,15 @@
 			</div>
 			<div class="col-md-6">
 				<h3><b><%=product.getName()%></b></h3>
-				<p><%=product.getDescription()%>
-				<p><b>상품코드 : </b><span class="badge text-bg-danger"> <%=product.getProductId()%></span>							
-				<p><b>저자</b> : <%=product.getAuthor()%>	
-				<p><b>출판사</b> : <%=product.getPublisher()%>	
-				<p><b>출판일</b> : <%=product.getReleaseDate()%>					
-				<p><b>분류</b> : <%=product.getCategory()%>
-				<p><b>재고수</b> : <%=product.getUnitsInStock()%>
+				<p><%=product.getDescription()%></p>
+				<p><b>상품코드 :</b> <span class="badge bg-danger"><%=product.getProductId()%></span></p>							
+				<p><b>등록자 :</b> <%=product.getRegistrant()%></p>	
+				<p><b>출판일 :</b> <%=product.getReleaseDate()%></p>					
+				<p><b>분류 :</b> <%=product.getCategory()%></p>
+				<p><b>상태 :</b> <%=product.getCondition()%></p>
 				<h4><%=product.getUnitPrice()%>원</h4>
 				<p><a href="#" class="btn btn-info"> 상품주문 &raquo;</a> 
-					<a href="./products.jsp" class="btn btn-secondary"> 상품목록 &raquo;</a>
+					<a href="./products.jsp" class="btn btn-secondary"> 상품목록 &raquo;</a></p>
 			</div>
 		</div>
 	<jsp:include page="footer.jsp" />
