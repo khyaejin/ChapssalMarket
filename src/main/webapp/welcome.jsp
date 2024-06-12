@@ -4,6 +4,13 @@
 <head>    
     <link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
     <title>Welcome</title>
+     <style>
+           .btn-info {
+            background-color: #ffeeba; /* 연한 노란색 */
+            border-color: #ffeeba; /* 연한 노란색 */
+            color: #343a40; /* 버튼 텍스트 색상 */
+        }
+    </style>
 </head>
 <body>
 <div class="container py-4">
@@ -37,7 +44,7 @@
                     String CT = hour + ":" + minute + ":" + second + " " + am_pm;
                     out.println("현재 접속 시각: " + CT + "\n");
                 %>  			
-                <p><a href="products.jsp" class="btn btn-info">상품 목록 보기 &raquo;</a></p>
+                <p><a href="products.jsp" class="btn btn-warning">상품 목록 보기 &raquo;</a></p>
             </div>
         </div>   
     </div> 	

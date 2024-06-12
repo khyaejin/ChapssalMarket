@@ -15,6 +15,7 @@ public class Product implements Serializable {
 	private String releaseDate;         // 구매일 (월/년)
 	private String condition; 		    // 신상품 or 중고상품
 	private String filename;            // 이미지 파일 이름
+	private int quantity; 				//장바구니에 담은 개수
 
 	// 기본 생성자
 	public Product() {
@@ -99,5 +100,13 @@ public class Product implements Serializable {
 
 	public void setFilename(String filename) {
 		this.filename = filename;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 }
