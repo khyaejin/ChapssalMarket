@@ -13,7 +13,7 @@ public class Product implements Serializable {
 	private String description; 	    // 설명
 	private String category; 		    // 분류
 	private String releaseDate;         // 구매일 (월/년)
-	private String condition; 		    // 신상품 or 중고상품
+	private String conditions; 		    // 신상품 or 중고상품
 	private String filename;            // 이미지 파일 이름
 	private int quantity; 				//장바구니에 담은 개수
 
@@ -86,12 +86,12 @@ public class Product implements Serializable {
 		this.releaseDate = releaseDate;
 	}
 
-	public String getCondition() {
-		return condition;
+	public String getConditions() {
+		return conditions;
 	}
 
-	public void setCondition(String condition) {
-		this.condition = condition;
+	public void setConditions(String conditions) {
+		this.conditions = conditions;
 	}
 
 	public String getFilename() {

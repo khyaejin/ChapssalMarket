@@ -36,7 +36,7 @@
 				<h5><b><%=product.getName()%></b></h5>
 				<p>등록자: <%=product.getRegistrant()%></p>
 				<p>가격: <%=product.getUnitPrice()%>원</p>
-				<p>상태: <%=product.getCondition()%></p>
+				<p>상태: <%=product.getConditions()%></p>
 				<p><%=shortDescription%></p>
 				<p><a href="./product.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상세 정보 &raquo;</a></p>
 			</div>	

@@ -34,7 +34,7 @@
                 <p><b>등록자 :</b> <%=product.getRegistrant()%></p>    
                 <p><b>출판일 :</b> <%=product.getReleaseDate()%></p>                    
                 <p><b>분류 :</b> <%=product.getCategory()%></p>
-                <p><b>상태 :</b> <%=product.getCondition()%></p>
+                <p><b>상태 :</b> <%=product.getConditions()%></p>
                 <h4><%=product.getUnitPrice()%>원</h4>
                 <%-- 장바구니에 추가하는 부분 --%>
                 <%

@@ -19,7 +19,7 @@ public class ProductRepository {
 		product1.setDescription("깨끗하게 사용한 아이폰 12입니다. 기스 거의 없고, 배터리 성능도 양호합니다.");
 		product1.setCategory("전자제품");
 		product1.setReleaseDate("2022/11/10");
-		product1.setCondition("중고상품");
+		product1.setConditions("중고상품");
 		product1.setFilename("iphone.jpg");
 		
 		Product product2 = new Product("SKU1235", "캐주얼 후드 스웨트셔츠", 70000);
@@ -27,7 +27,7 @@ public class ProductRepository {
 		product2.setDescription("스타일리시한 캐주얼 후드 스웨트셔츠입니다. 앞면에 로고가 프린팅되어 있으며, 여러 색상과 사이즈로 제공됩니다. 사진은 모델 사진 첨부합니다.");
 		product2.setCategory("의류");
 		product2.setReleaseDate("2023/01/05");
-		product2.setCondition("새 제품");
+		product2.setConditions("새 제품");
 		product2.setFilename("hoodie.jpg");
 
 		
@@ -36,7 +36,7 @@ public class ProductRepository {
 		product3.setDescription("매혹적인 플로럴 무드 향수입니다. 부드러운 향이 지속되며, 섬세하고 여성스러운 느낌을 전달합니다.");
 		product3.setCategory("향수");
 		product3.setReleaseDate("2023/02/15");
-		product3.setCondition("새 제품");
+		product3.setConditions("새 제품");
 		product3.setFilename("perfume.jpg");
 
 		
