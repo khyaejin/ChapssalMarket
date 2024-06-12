@@ -30,7 +30,7 @@
 			</div>
 			<div class="col-md-6">
 				<h3><b><%=product.getName()%></b></h3>
-				<p><%=product.getDescription()%></p>
+				<p><%= (product.getDescription() != null) ? product.getDescription() : "" %></p>
 				<p><b>상품코드 :</b> <span class="badge bg-danger"><%=product.getProductId()%></span></p>							
 				<p><b>등록자 :</b> <%=product.getRegistrant()%></p>	
 				<p><b>출판일 :</b> <%=product.getReleaseDate()%></p>					

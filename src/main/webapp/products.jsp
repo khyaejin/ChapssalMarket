@@ -27,6 +27,8 @@
 	 <%
 		for (int i = 0; i < listOfProducts.size(); i++) {
 			Product product = listOfProducts.get(i);
+			String description = product.getDescription();
+			String shortDescription = (description != null && description.length() > 60) ? description.substring(0, 60) + "..." : description;
 	  %>
      	<div class="col-md-4">
        		<div class="h-100 p-2">	
@@ -35,7 +37,7 @@
 				<p>등록자: <%=product.getRegistrant()%></p>
 				<p>가격: <%=product.getUnitPrice()%>원</p>
 				<p>상태: <%=product.getCondition()%></p>
-				<p><%=product.getDescription().substring(0, 60)%>...</p>
+				<p><%=shortDescription%></p>
 				<p><a href="./product.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상세 정보 &raquo;</a></p>
 			</div>	
 		</div>			
