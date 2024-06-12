@@ -41,11 +41,18 @@
                     // 장바구니에 추가할 상품을 request에 바로 저장합니다.
                     request.setAttribute("productToAddToCart", product);
                 %>
-                <p><a href="./addCart.jsp?id=<%=product.getProductId()%>" class="btn btn-warning"> 장바구니에 추가 &raquo;</a> 
-                    <a href="./cart.jsp" class="btn btn-secondary"> 장바구니로 이동 &raquo;</a></p>
-            </div>
+				<a href="./addCart.jsp?id=<%=product.getProductId()%>" class="btn btn-warning" onclick="addToCart()"> 장바구니에 추가 &raquo;</a>
+				<a href="./cart.jsp" class="btn btn-primary" style="background-color: #ffc107; color: black; border-color: #ffc107;"> 장바구니로 이동 &raquo;</a>
+                <a href="./products.jsp" class="btn btn-primary" style="background-color: ivory; color: black; border-color: transparent;"> 상품 목록 보기 &raquo;</a>
+			</div>
         </div>
     <jsp:include page="footer.jsp" />
 </div>
+<script>
+	function addToCart() {
+		if(confirm('장바구니에 추가가 완료되었습니다.')) {
+		}
+	}
+</script>
 </body>
 </html>
